@@ -17,6 +17,8 @@ public class Funcionario {
 		this.titulacao = titulacao;
 		this.salarioBase = salarioBase;
 	}
+	
+	//gets and setters
 
 	public int getCpf() {
 		return cpf;

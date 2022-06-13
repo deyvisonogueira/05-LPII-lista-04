@@ -33,14 +33,12 @@ public class Tercerizado extends Funcionario{
 			if(getTitulacao().equals("Mestre")){
 				return salarioMestre;
 			}
-			if(this.getFuncao().equals("Doutor")) {
+			else if(this.getTitulacao().equals("Doutor"))
 				return salarioDoutor;
-			}
-			else {
-				return this.getSalarioBase();
-			}
+		}
+			return this.getSalarioBase();
 		}
 	}
-}
+
 
 
