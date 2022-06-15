@@ -1,35 +1,37 @@
 package model;
 
-public class Funcionario {
-	private int cpf;
+public abstract class Funcionario {
+
+	private String cpf;
 	private String nome;
 	private String endereco;
-	private String dataAdmissao;
+	private String datadeEmissao;
 	private String titulacao;
 	private double salarioBase;
-
-	public Funcionario(int cpf, String nome, String endereco, String dataAdmissao, String titulacao, double salarioBase) {
-
+	
+	public Funcionario(String cpf, String nome, String endereco, String datadeEmissao, String titulacao, double salario){
 		this.cpf = cpf;
 		this.nome = nome;
 		this.endereco = endereco;
-		this.dataAdmissao = dataAdmissao;
+		this.datadeEmissao = datadeEmissao;
 		this.titulacao = titulacao;
-		this.salarioBase = salarioBase;
+		this.salarioBase = salario;
+	}
+
+	public double CalculaSalario(){
+		return this.salarioBase;
 	}
 	
-	//gets and setters
-
-	public int getCpf() {
-		return cpf;
+	public String getCpf() {
+		return this.cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 
 	public void setNome(String nome) {
@@ -37,23 +39,23 @@ public class Funcionario {
 	}
 
 	public String getEndereco() {
-		return endereco;
+		return this.endereco;
 	}
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 
-	public String getdataAdmissao() {
-		return dataAdmissao;
+	public String getDatadeEmissao() {
+		return this.datadeEmissao;
 	}
 
-	public void setdataAdmissao(String dataAdmissao) {
-		this.dataAdmissao = dataAdmissao;
+	public void setDatadeEmissao(String datadeEmissao) {
+		this.datadeEmissao = datadeEmissao;
 	}
 
 	public String getTitulacao() {
-		return titulacao;
+		return this.titulacao;
 	}
 
 	public void setTitulacao(String titulacao) {
@@ -61,20 +63,16 @@ public class Funcionario {
 	}
 
 	public double getSalarioBase() {
-		return salarioBase;
+		return this.salarioBase;
 	}
 
 	public void setSalarioBase(double salarioBase) {
 		this.salarioBase = salarioBase;
 	}
-	
-	public double calculaSalario() {
-		return this.salarioBase;
-	}
-	
-	public String toString() 
-	{
-		return "\nCPF: " + this.cpf + "\n Nome: " + this.nome + "\nEndere√ßo: " + this.endereco + "\nData de Amiss√£o:" + this.dataAdmissao + "\nTitula√ß√£o: " + this.titulacao + "\nSalario base: " + this.salarioBase;
+
+	public String toString() {
+		return "\nCPF= " + cpf + "\nnome= " + nome + "\nendereÁo= " + endereco + "\ndata de Emiss„o= "
+				+ datadeEmissao + "\ntitulaÁ„o= " + titulacao + "\nsal·rio Base= " + salarioBase;
 	}
 	
 }
